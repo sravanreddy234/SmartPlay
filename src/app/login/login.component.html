@@ -1,0 +1,24 @@
+<!-- <div class="container">
+    <input type="text" name="UserId" placeholder="UserId">
+    <input type="password" name="Password" placeholder="Password">
+    <button type="submit" value="Login" id="login-button">Login</button> 
+</div> -->
+<div class="login-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your username</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field> 
+      <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="login-button">
+        <button mat-raised-button color="primary">Login</button>
+      </div>
+    </div>
